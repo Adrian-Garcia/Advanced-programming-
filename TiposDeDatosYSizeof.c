@@ -10,6 +10,7 @@
 // Function principal
 int main() {
 
+	// Definimos variables
 	int integer = 0;
 	char character = 0;
 	double doubleNumber = 0;
