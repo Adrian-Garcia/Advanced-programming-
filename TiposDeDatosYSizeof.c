@@ -29,7 +29,7 @@ int main() {
 	// Desplegamos datos
 	printf("\n\nYour integer <%d> storage size is <<%ld>> bytes", integer, sizeof(integer));
 	printf("\nYour char <%c> storage size is <<%ld>> bytes. And I can read it as <<%c>> or as <<%d>>", character, sizeof(character), character, character);
-	printf("\nYour double <%lf> storage size is <<%ld>> bytes, I can read any number from <<%lf>> to <<%lf>> in this data type.", doubleNumber, sizeof(doubleNumber), -DBL_MAX, DBL_MAX);
+	printf("\nYour double <%lf> storage size is <<%ld>> bytes, I can read any number from <<%d>> to <<%lf>> in this data type.", doubleNumber, sizeof(doubleNumber), 0, DBL_MAX);
 
 	// Terminamos programa
 	return 0;
