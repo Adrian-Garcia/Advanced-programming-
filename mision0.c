@@ -30,10 +30,25 @@ struct Agente {
 // Añade un agente a la lista encadenada
 void agregarAgente(struct Agente* head) {
 
+	char name[50];
+
 	// No hay agentes registrados
 	if (!numEntradas) {
+
 		head = (struct Agente*)malloc(sizeof(struct Agente)); 
 		head->nextAgente = NULL;
+
+		printf("Inserta el nombre del agente: ");
+		scanf(" %s", name);
+		head->nombre = name;
+
+		printf("Inserta el apellido del agente: ");
+		scanf(" %s", lname);
+		head->apellido = lname;
+		
+		printf("Inserta la edad del agente: ");
+		scanf(" %d", &age);
+		head->age = edad;
 	}
 
 	// Hay agentes registrados
@@ -84,7 +99,7 @@ int main() {
 		switch (opcion) {
 			
 			case '1':
-				agregarAgente(head);
+				agregarAgente( &head);
 			break;
 
 			case '2':
