@@ -31,6 +31,10 @@ struct Agente {
 void agregarAgente(struct Agente* head) {
 
 	char name[50];
+	char lname[50];
+	int edad;
+	int numeroDeActivos;
+	int numeroDeAgentes;
 
 	// No hay agentes registrados
 	if (!numEntradas) {
@@ -49,6 +53,15 @@ void agregarAgente(struct Agente* head) {
 		printf("Inserta la edad del agente: ");
 		scanf(" %d", &age);
 		head->age = edad;
+
+		printf("Inserta el numero de Activos: \n");
+		scanf(" %d", &numeroDeActivos);
+		head->numActivos = numeroDeActivos;
+
+		for (int i=0; i<numeroDeActivos; i++) {
+			
+		} 
+
 	}
 
 	// Hay agentes registrados
@@ -61,6 +74,7 @@ void agregarAgente(struct Agente* head) {
 			curr = curr->nextAgente;
 		
 		struct Agente* newAgente = (struct Agente*)malloc(sizeof(struct Agente));
+		newAgente->newAgente = NULL;
 		curr->nextAgente = newAgente;
 	}
 
